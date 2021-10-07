@@ -73,7 +73,7 @@ while should_continue:
         should_continue = False
     except:
         print("invalid input")
-
+options = Options()
 options.headless = True
 driver = webdriver.Firefox( options=options)
 print("driver Setup")
