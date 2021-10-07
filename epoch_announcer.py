@@ -69,5 +69,5 @@ options.headless = True
 driver = webdriver.Firefox( options=options)
 print("driver Setup")
 driver.get("https://songbird-explorer.flare.network/address/0xbfA12e4E1411B62EdA8B035d71735667422A6A9e/read-contract")
-get_epochblock(driver,2)
+get_epochblock(driver,3)
 driver.quit()
