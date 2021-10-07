@@ -64,10 +64,19 @@ def get_epochblock(driver, epoch_to_check):
         
 
 print("starting")
-options = Options()
+should_continue = True
+
+while should_continue:
+    try:
+        starting_epoch = input("Please enter the number for the epoch you wish to start looking at ")
+        starting_epoch_int = int(starting_epoch)
+        should_continue = False
+    except:
+        print("invalid input")
+
 options.headless = True
 driver = webdriver.Firefox( options=options)
 print("driver Setup")
 driver.get("https://songbird-explorer.flare.network/address/0xbfA12e4E1411B62EdA8B035d71735667422A6A9e/read-contract")
-get_epochblock(driver,3)
+get_epochblock(driver,starting_epoch_int)
 driver.quit()
